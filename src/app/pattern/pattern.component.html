@@ -1,0 +1,35 @@
+<form fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <mat-form-field>
+        <input type="number" 
+                matInput    
+                placeholder="Please enter the total no. of blocks"
+                ngModel
+                name="blocks"
+                required
+                #blocksInput="ngModel"
+                [disabled]="showPattern">
+                   <mat-error *ngIf="blocksInput.hasError('required')">Field must not be empty</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+        <input type="number" 
+        matInput    
+        placeholder="Please enter no. of blocks per row"
+        ngModel
+        name="blocksperrow"
+        required
+        #blocksPerRowInput="ngModel"
+        [disabled]="showPattern">
+       <mat-error *ngIf="blocksPerRowInput.hasError('required')">Field must not be empty</mat-error>
+  </mat-form-field>
+  <button type="submit" mat-raised-button color="primary" [disabled]="f.invalid || showPattern">Create a pattern</button>
+</form>
+
+<div class = "container" *ngIf="showPattern">
+  <div class="row text-center" *ngFor="let group of blocksGrouped; let i = index">
+        <div class="col" *ngFor="let block of blocksGrouped[i]"  >
+         <div class="demo" (click)="onSelect(block)" [class.active]="block==selectedDiv"></div>
+        </div>
+</div>
+
+
+
