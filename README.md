@@ -1,10 +1,10 @@
 # Blocks Pattern
 
-This project is built using pure Javascript, HTML5, CSS3. Its a color guessing game where the player are given 6 different types of color panel and one RGB Color Code. The player has to select one of the color panel based on the estimation of RGB Color Code.
+This project is built using Angular 7 / Angular Material, Flex Layout, HTML5, CSS3. It displays a pattern of blocks based on the user Input. The user will input the total number of blocks and the total number of blocks needed per row.
 
-The game consists of easy level where few colors are given in order to guess the correct color. Also, it consists of hard level where more colors are given to guess the correct color.
+The application will create a pattern based on the user Input. The user can click on the block to change the colour of the block. Proper CSS Styling is used to design the block which creates a beautiful blocks pattern.
 
-This game is really fun to play. It will also increase your knowledge of RGB Color Codes which will further help in CSS Styling.
+This game is really fun to play to create different patterns based on the user input. 
 
 ## What I used?
 
